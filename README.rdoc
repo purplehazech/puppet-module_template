@@ -1,6 +1,6 @@
 == Module: module_template
 
-{<img src="https://secure.travis-ci.org/purplehazech/puppet-module-template.png?branch=master" alt="Build Status" />}[https://travis-ci.org/purplehazech/puppet-module-template]
+{<img src="https://secure.travis-ci.org/purplehazech/puppet-module_template.png?branch=master" alt="Build Status" />}[https://travis-ci.org/purplehazech/puppet-module_template]
 
 This is a simple module template for quickly starting off new
 modules.
