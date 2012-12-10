@@ -1,0 +1,77 @@
+== Module: module_template
+
+{<img src="https://secure.travis-ci.org/purplehazech/puppet-module-template.png?branch=master" alt="Build Status" />}[https://travis-ci.org/purplehazech/puppet-module-template]
+
+This is a simple module template for quickly starting off new
+modules.
+
+=== Example Usage
+
+Run module_template in standalone mode.
+
+  include module_template
+
+Run module_template with parameters.
+
+  class { 'module_template':
+    enable => present
+  }
+
+If you module has multiple manifests you will add docs on the usage of
+submodules here. This is what ends up being used everywhere as 
+boilerplate.
+
+=== About
+
+Replace this section completely! (or keep it for reference)
+
+This template is for you conventient kickstarting of new forge
+modules. The intended workflow is like so.
+
+  git init .
+  git remote add module-template https://github.com/purplehazech/puppet-module-template.git
+  git pull module-template master
+
+Now go and add some spec test for the first resources you use. Head 
+up to github and create an empty repo now. 
+
+  vim spec/classes/module_template.rb
+
+Now go to http://travis-ci.org and activate the module.
+
+  git remote add origin git@github.com:you/puppet-nextgreatthing.git
+  git push origin master
+
+There we are, build number one should now fail in travis! Go ahead 
+take a look at the error.
+
+Next we will implement the missing feature.
+
+  git checkout -b fix-failing-rspec
+  git push origin fix-failing-rspec
+
+Wait for the build to run on travis-ci.org. And if it suceeds, open a 
+pull request on github.
+
+When you landed your code in master you may safely delete the remote 
+and local branches.
+
+  git push origin :fix-failing-rspec
+  git branch -D fix-failing-rspec
+
+Remember to increment the Version number in the Modulefile as follows.
+
+* increment the major *1*.0.0 if your pull request contains changes 
+  that are not backwards compatible
+* increment the minor 1.*1*.0 if your pull request contains backwards 
+  compatible changes
+* increment the patch 1.0.*1* if your pull request contains bugfixes 
+  that do not change the public api
+* use the 0 major for initial rapid development
+
+Look at http://semver.org for more guidance on when and how to do versioning.
+
+Also see here on how to properly release a module: 
+https://github.com/puppetlabs/puppetlabs-stdlib/blob/master/RELEASE_PROCESS.markdown
+
+@todo write about from the module-template remote
