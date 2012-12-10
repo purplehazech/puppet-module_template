@@ -20,4 +20,8 @@ class module_template (
   $enable = hiera('enable', present)
 ) {
   validate_re($enable, [ '^present', '^absent' ])
+
+  if ($enable == absent) {
+    notify{ "module_template is ${enable}": }
+  }
 }
