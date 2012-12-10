@@ -1,0 +1,10 @@
+name 'purplehazech-module_template'
+version '0.0.1'
+
+author ''
+license ''
+project_page 'https://github.com/purplehazech/puppet-module-template'
+source 'https://github.com/purplehazech/puppet-module-template.git'
+summary 'a template for quickstarting modules, fork away or trash the history at your liking'
+description ''
+dependency 'puppetlabs/stdlib', '~3.2.0'
