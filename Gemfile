@@ -3,7 +3,7 @@ source :rubygems
 if ENV.key?('PUPPET_VERSION')
   puppetversion = "= #{ENV['PUPPET_VERSION']}"
 else
-  puppetversion = ['>= 2.7']
+  puppetversion = ['>= 3.0']
 end
 
 gem 'puppet', puppetversion
@@ -15,4 +15,5 @@ group :test do
   gem 'rspec-puppet', '>= 0.1.5'
   gem 'puppet-lint', '>= 0.3.2'
   gem 'puppetlabs_spec_helper', '>= 0.3.0'
+  gem 'rspec-hiera-puppet', '>= 1.0.0'
 end
